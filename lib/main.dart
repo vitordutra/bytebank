@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(ByteBankApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class ByteBankApp extends StatelessWidget {
+  const ByteBankApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +12,21 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white70,
       ),
       home: Scaffold(
-        body: ListaTransferencias(),
-        appBar: AppBar(
-          title: Text("Transferências"),
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {},
-        ),
+        body: FormularioTransferencia(),
       ),
+    );
+  }
+}
+
+class FormularioTransferencia extends StatelessWidget {
+  const FormularioTransferencia({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Criando Transferência'),
+      ),
+      body: Text("Teste"),
     );
   }
 }
@@ -30,11 +36,20 @@ class ListaTransferencias extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ItemTransferencia(Transferencia(100.0, 1000)),
-        ItemTransferencia(Transferencia(150.0, 1002)),
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Transferências"),
+      ),
+      body: Column(
+        children: [
+          ItemTransferencia(Transferencia(100.0, 1000)),
+          ItemTransferencia(Transferencia(150.0, 1002)),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {},
+      ),
     );
   }
 }
