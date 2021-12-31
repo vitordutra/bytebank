@@ -12,29 +12,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white70,
       ),
       home: Scaffold(
-        body: Column(
-          children: [
-            Card(
-              child: ListTile(
-                leading: Icon(Icons.monetization_on),
-                title: Text('100.0'),
-                subtitle: Text('1000-0'),
-              ),
-            ),
-            Card(
-              child: ListTile(
-                  leading: Icon(Icons.monetization_on),
-                  title: Text('200.0'),
-                  subtitle: Text('1000-0')),
-            ),
-            Card(
-              child: ListTile(
-                  leading: Icon(Icons.monetization_on),
-                  title: Text('300.0'),
-                  subtitle: Text('1000-0')),
-            ),
-          ],
-        ),
+        body: ListaTransferencias(),
         appBar: AppBar(
           title: Text("Transferências"),
         ),
@@ -45,4 +23,45 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
+
+class ListaTransferencias extends StatelessWidget {
+  const ListaTransferencias({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        ItemTransferencia(Transferencia(100.0, 1000)),
+        ItemTransferencia(Transferencia(150.0, 1002)),
+      ],
+    );
+  }
+}
+
+class ItemTransferencia extends StatelessWidget {
+  final Transferencia _transferencia;
+
+  const ItemTransferencia(
+    this._transferencia, {
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: Icon(Icons.monetization_on),
+        title: Text(_transferencia.valor.toString()),
+        subtitle: Text(_transferencia.numeroConta.toString()),
+      ),
+    );
+  }
+}
+
+class Transferencia {
+  final double valor;
+  final int numeroConta;
+
+  Transferencia(this.valor, this.numeroConta);
 }
