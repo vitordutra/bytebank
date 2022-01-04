@@ -38,7 +38,7 @@
 This "Banking App" was created to learn the fundamentals of Flutter programming
 
 <p align="center">
-  <img src="https://ik.imagekit.io/nfbjje2exl/Android-Emulator-Pixel_2_API_29_5554-2022-01-03-22-56-34_i-vXTN0SX.gif" alt="App image" height="500px" />
+  <img src="https://s10.gifyu.com/images/Android-Emulator-Pixel_2_API_29_5554-2022-01-03-22-56-34.gif" height=360px alt="App image" />
 </p>
 
 ## 🗻 Features
@@ -55,11 +55,12 @@ This project uses [Flutter](https://flutter.dev), so you will need it to build t
 Clone the repository:
 
 ```bash
-
 $ git clone https://github.com/vitordutra/bytebank.git
+```
 
-# Enter in the `bytebank` folder:
+Enter in the bytebank folder
 
+```bash
 $ cd bytebank
 ```
 
@@ -96,5 +97,3 @@ This project uses [MIT]() license.
   <a href="https://www.linkedin.com/in/vitor-dutra/"><img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vitor-dutra" alt="LinkendIn" /></a>
   <a href="mailto:dutra.jvitor@gmail.com"><img src="https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jvitor@gmail.com" alt="Gmail" /></a>
 </p>
-
-<p align="center">Developed with 🧠 by Vitor Dutra</p>
