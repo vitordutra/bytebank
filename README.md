@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    This app was created to learn the basics of Flutter
+    An banking app created to learn the basics of Flutter
     <br />
     <br />
     <a href="README.md">🇺🇸 English</a>
